@@ -1,13 +1,14 @@
 import React from "react"
+import "./table.css"
 
 function Table(props) {
 
 
     return (
-        <table class="table">
+        <table className="table table-striped">
             <thead>
                 <tr>
-                    <th scope="col">First</th>
+                    <th className="sort-style" onClick={props.sortData} scope="col">First (click to sort)</th>
                     <th scope="col">Last</th>
                     <th scope="col">Email</th>
                     <th scope="col">Phone</th>
@@ -20,7 +21,6 @@ function Table(props) {
                     props.data.map((e,i) => {
                         return (
                             <tr>
-                                {/* <th scope="row">{i}</th> */}
                                 <td>{e.name.first}</td>
                                 <td>{e.name.last}</td>
                                 <td>{e.email}</td>
